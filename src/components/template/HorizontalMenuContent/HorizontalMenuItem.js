@@ -2,16 +2,11 @@ import React from 'react'
 import navigationIcon from 'configs/navigation-icon.config'
 import { MenuItem } from 'components/ui'
 import HorizontalMenuNavLink from './HorizontalMenuNavLink'
-import { useTranslation } from 'react-i18next'
 
 const HorizontalMenuItem = ({nav, isLink, manuVariant}) => {
 
-	const { title, translateKey, icon, path } = nav
+	const { title, icon, path } = nav
 
-	const { t } = useTranslation()
-
-	const itemTitle = t(translateKey, title)
-	
 	return (
 		<MenuItem variant={manuVariant}>
 			{icon && (
@@ -22,10 +17,10 @@ const HorizontalMenuItem = ({nav, isLink, manuVariant}) => {
 			{(path && isLink)
 				?
 				<HorizontalMenuNavLink path={path}>
-					{itemTitle}
+					{title}
 				</HorizontalMenuNavLink>
 				: 
-				<span>{itemTitle}</span>
+				<span>{title}</span>
 			}
 		</MenuItem>
 	)

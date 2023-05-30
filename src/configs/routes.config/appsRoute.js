@@ -218,6 +218,21 @@ const appsRoute = [
         component: React.lazy(() => import('views/account/KycForm')),
         authority: [ADMIN, USER],
     },
+    // ======
+    // NEW ROUTING
+    // ======
+    {
+        key: 'home',
+        path: `${APP_PREFIX_PATH}/home`,
+        component: React.lazy(() => import('views/account/KycForm')),
+        authority: [ADMIN, USER],
+    },
+    {
+        key: 'about',
+        path: `${APP_PREFIX_PATH}/about`,
+        component: React.lazy(() => import('views/account/ActivityLog')),
+        authority: [ADMIN, USER],
+    },
 ]
 
 export default appsRoute
