@@ -20,7 +20,6 @@ const VerticalMenuContent = props => {
 		onMenuItemClick
 	} = props
 
-	const { t } = useTranslation()
 
 	const [defaulExpandKey, setDefaulExpandKey] = useState([])
 
@@ -67,7 +66,7 @@ const VerticalMenuContent = props => {
 
 			if (nav.subMenu.length > 0) {
 				return (
-					<MenuGroup key={nav.key} label={t(nav.translateKey) || nav.title }>
+					<MenuGroup key={nav.key} label={nav.title}>
 						{
 							nav.subMenu.map(subNav => (
 								subNav.subMenu.length > 0 

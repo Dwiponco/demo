@@ -2,16 +2,14 @@ import React from 'react'
 import { Menu, Tooltip } from 'components/ui'
 import VerticalMenuIcon from './VerticalMenuIcon'
 import { Link } from 'react-router-dom'
-import { Trans, useTranslation } from 'react-i18next'
 import { AuthorityCheck } from 'components/shared'
 
 const { MenuItem } = Menu
 
-const CollapsedItem = ({title, translateKey, children}) => {
-	const { t } = useTranslation()
+const CollapsedItem = ({title, children}) => {
 
 	return (
-		<Tooltip title={t(translateKey) || title} placement="right">
+		<Tooltip title={ title} placement="right">
 			{children}
 		</Tooltip>
 	)
@@ -36,7 +34,7 @@ const DefaultItem = (props) => {
 					<VerticalMenuIcon icon={nav.icon} />
 					{ !sideCollapsed && (
 						<span>
-							<Trans i18nKey={nav.translateKey} defaults={nav.title} />
+							{nav.title}
 						</span>
 					)}
 				</Link>

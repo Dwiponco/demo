@@ -224,7 +224,7 @@ const appsRoute = [
     {
         key: 'home',
         path: `${APP_PREFIX_PATH}/home`,
-        component: React.lazy(() => import('views/account/KycForm')),
+        component: React.lazy(() => import('views/home/index')),
         authority: [ADMIN, USER],
     },
     {
