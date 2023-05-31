@@ -1,35 +1,105 @@
 import React from 'react'
-import { Loading, Container, AdaptableCard } from 'components/shared'
+import {DoubleSidedImage } from 'components/shared'
+import { Button, Card } from 'components/ui'
 const Home = () => {
     return (
-        <Container>
-                <Loading
-                    loading={false}
-                >
-                    <h3>here title artcile</h3>
-                    <div className="flex items-center mt-4 gap-4">
-                        <div className="text-xs">
-                            <div className="mb-1">
-                                Created by:
-                                <span className="font-semibold text-gray-900 dark:text-gray-100">{"article.createdBy"}</span>
-                            </div>
-                            <div>
-                                <span>Last updated: {"article.updateTime"}</span>
-                            </div>
+        <div className="grid h-full">
+            <div
+                className="h-[100%] p-10 w-full bg-cover bg-no-repeat"
+                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1529900672901-908be5302554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')` }}
+            >
+                <div>
+                    <h3 className="text-white mb-4">The Clover Sports Club</h3>
+                    <p className="text-lg text-white opacity-80 max-w-[700px]">
+                        Selamat datang di website member futsal kami! Di sini, kami menawarkan pengalaman futsal yang menyenangkan dan penuh semangat untuk para anggota kami.
+                    </p>
+                </div>
+                <div className='mt-10'>
+                    <Button
+                    >
+                        <span>Join bersama kami</span>
+                    </Button>
+                </div>
+            </div>
+            <div className="grid lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-4">
+                <Card onClick={() => { }}>
+                    <div className="mb-4 flex justify-center">
+                        <DoubleSidedImage
+                            className="h-[120px]"
+                            src={'/img/thumbs/soccer/lagom-coach-and-soccer-team.png'}
+                        />
+                    </div>
+                    <div className="text-center">
+                        <h5 className="mb-1">Pelatihan</h5>
+                        <div className='text-left'>
+                            <span>Tim pelatih kami terdiri dari instruktur yang berpengalaman dan berdedikasi. Mereka akan membantu Anda meningkatkan keterampilan futsal Anda melalui latihan yang terstruktur dan dukungan penuh.</span>
                         </div>
                     </div>
-                    <div className="mt-8 prose dark:prose-invert max-w-none">
-                        
-                        <p>Kopi-luwak, seasonal breve strong caffeine medium lungo grinder. Espresso filter, café au lait turkish, sweet, single shot half and half americano variety mocha extraction. Skinny to go, a brewed, mocha single origin, plunger pot cup strong white dripper. Single origin pumpkin spice, instant, cultivar americano crema aromatic bar  café au lait.</p>
-                        <p>Acerbic frappuccino acerbic, flavour, in carajillo bar  percolator aroma trifecta half and half et extraction barista, coffee affogato organic est latte wings breve lungo. Percolator, caramelization, foam organic, coffee frappuccino ristretto chicory seasonal cappuccino steamed grinder half and half foam mazagran fair trade, foam carajillo a in carajillo. Spoon medium ristretto irish dripper steamed, single shot, viennese, sit filter, flavour java cinnamon breve milk irish americano. Java doppio con panna, aged qui trifecta redeye beans, coffee trifecta dripper, bar  variety saucer, a instant grinder wings flavour. Froth filter instant strong grinder saucer medium id that medium blue mountain, in, extra , aged lungo siphon, instant, strong, dripper siphon affogato seasonal mocha. Coffee qui so eu mocha decaffeinated, organic mazagran affogato, as seasonal kopi-luwak doppio con panna.</p>
-                        <p>Roast, breve, french press extraction and acerbic, con panna, cup skinny doppio aroma seasonal. Strong, coffee, milk, caffeine aftertaste body mazagran pumpkin spice irish affogato.</p>
-                        <p>Est java mug milk a cortado saucer so aroma con panna froth sweet con panna. Dripper single origin turkish shop in as froth black robusta doppio so roast medium cortado, variety con panna, barista carajillo café au lait so cortado pumpkin spice. Cappuccino qui organic doppio trifecta redeye rich, viennese, dark eu at as sit caramelization as, cortado to go bar  mug coffee macchiato iced whipped. Siphon a breve chicory, dark, chicory, barista cup froth, caramelization whipped, caramelization siphon crema sugar, doppio cream turkish siphon a americano rich. Bar , macchiato roast, seasonal lungo milk, robusta, white milk, cup to go, flavour, spoon siphon est, froth, french press so, kopi-luwak mug foam sit sweet. Foam, caramelization dark cortado, brewed pumpkin spice turkish frappuccino single origin body turkish, macchiato, espresso variety macchiato, froth seasonal, crema robust con panna decaffeinated turkish organic medium. Barista et extraction, so organic aftertaste beans at, grounds as iced cinnamon, aged, spoon fair trade so shop mazagran.</p>
-                        <p>Cappuccino, percolator latte viennese as, caffeine, sweet, a and, affogato, beans spoon and crema, body, to go sit chicory coffee robust dark. Et, to go java filter doppio single shot cup qui kopi-luwak, arabica aftertaste café au lait grounds arabica at medium americano iced siphon as saucer organic barista. Spoon aromatic latte filter, mazagran percolator siphon kopi-luwak, grounds at kopi-luwak frappuccino mazagran beans strong french press brewed. </p>
-                        <p> Americano wings grinder variety id irish aftertaste iced, doppio mazagran, instant irish robust percolator sit foam latte viennese milk. Doppio chicory grounds to go steamed skinny mocha aged, robust skinny caramelization trifecta plunger pot single origin. Sweet cup cappuccino viennese lungo, spoon java white aftertaste frappuccino spoon froth fair trade flavour affogato pumpkin spice. Bar  caffeine froth, coffee cinnamon coffee, in pumpkin spice, espresso, carajillo espresso seasonal café au lait sit carajillo. Extra  skinny, wings dripper, froth plunger pot rich variety, single shot siphon frappuccino rich, and shop skinny cinnamon filter, grounds seasonal cup decaffeinated foam. Eu, rich arabica irish instant, lungo half and half seasonal, bar  siphon cup espresso caramelization. </p>
+                </Card>
+                <Card onClick={() => { }}>
+                    <div className="mb-4 flex justify-center">
+                        <DoubleSidedImage
+                            className="h-[120px]"
+                            src={'/img/thumbs/soccer/casual-life-3d-joyful-boy-playing-football.png'}
+                        />
                     </div>
-                </Loading>
-        </Container>
+                    <div className="text-center">
+                        <h5 className="mb-1">Pola</h5>
+                        <span> Kami menyediakan beragam pola latihan yang dirancang untuk membantu Anda mengembangkan keterampilan dan pemahaman taktis dalam bermain futsal</span>
+                    </div>
+                </Card>
+                <Card onClick={() => { }}>
+                    <div className="mb-4 flex justify-center">
+                        <DoubleSidedImage
+                            className="h-[120px]"
+                            src={'/img/thumbs/soccer/lagom-strategic-plan-in-soccer.png'}
+                        />
+                    </div>
+                    <div className="text-center">
+                        <h5 className="mb-1">Teknik</h5>
+                        <span>Kami menawarkan program yang dirancang khusus untuk meningkatkan keterampilan teknis Anda dalam bermain futsal. </span>
+                    </div>
+                </Card>
+                <Card onClick={() => { }}>
+                    <div className="mb-4 flex justify-center">
+                        <DoubleSidedImage
+                            className="h-[120px]"
+                            src={'/img/thumbs/soccer/casual-life-3d-boy-standing-with-football-with-hand-on-hip.png'}
+                        />
+                    </div>
+                    <div className="text-center">
+                        <h5 className="mb-1">Full Game</h5>
+                        <span>Latihan Full Game: Program ini dirancang khusus untuk membantu Anda mempersiapkan diri dalam menjalani pertandingan futsal penuh. Latihan dalam program ini mencakup aspek fisik, teknis, taktis, dan mental yang diperlukan dalam pertandingan sebenarnya. </span>
+                    </div>
+                </Card>
+                <Card onClick={() => { }}>
+                    <div className="mb-4 flex justify-center">
+                        <DoubleSidedImage
+                            className="h-[120px]"
+                            src={'/img/thumbs/soccer/lagom-soccer-player-with-ball.png'}
+                        />
+                    </div>
+                    <div className="text-center">
+                        <h5 className="mb-1">Agility</h5>
+                        <span>Agility kami didesain untuk membantu Anda menjadi pemain futsal yang komprehensif dengan kecepatan, ketangkasan, serta kemampuan mental yang unggul.</span>
+                    </div>
+                </Card>
+            </div>
 
+            <div className='mt-6'>
+                <Card bodyClass="flex gap-4">
+                    <DoubleSidedImage
+                        className="h-[150px]"
+                        src={'/img/thumbs/soccer/lagom-trainer.png'}
+                    />
+                    <div>
+                        <span>
+                            Bergabunglah dengan program pelatihan teknik futsal kami dan tingkatkan keterampilan Anda dengan dukungan para pelatih profesional. Daftar sekarang di website kami atau hubungi tim kami untuk informasi lebih lanjut. Siapkan diri Anda untuk menjadi pemain futsal yang handal dan unggul dalam teknik!
+                        </span>
+                    </div>
+                </Card>
+            </div>
+        </div>
     )
 }
 
